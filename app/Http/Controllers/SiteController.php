@@ -32,6 +32,11 @@ class SiteController extends Controller
     }
 
     protected function renderOutput() {
+        $menu = $this->getMenu();
+        $navigation = view(env('THEME') . '.menu', compact('menu'))->render();
+        $this->vars = Arr::add($this->vars, 'navigation', $navigation);
+
+
         $contacts = $this->getContact();
         $footer = view(env('THEME') . '.footer', compact('contacts'))->render();
         $this->vars = Arr::add($this->vars, 'footer', $footer);
@@ -39,10 +44,27 @@ class SiteController extends Controller
         return view($this->template)->with($this->vars);
     }
 
+    protected function getMenu() {
+        $menu = $this->menu_rep->get('*');
+        $menuBuilder = \Menu::make('myMenu', function ($m) use ($menu){
+            foreach ($menu as $item) {
+                if ($item->parent == 0) {
+                    $m->add($item->alias, $item->path)->id($item->id);
+                }
+                else {
+                    if ($m->find($item->parent)) {
+                        $m->find($item->parent)->add($item->alias, $item->path)->id();
+                    }
+                }
+            }
+        });
+
+        return $menuBuilder;
+    }
+
     protected function getContact() {
         $contact = $this->contact_rep->get('*');
 
         return $contact;
     }
-
 }

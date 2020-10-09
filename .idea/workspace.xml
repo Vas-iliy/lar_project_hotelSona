@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d435acc-d345-4de9-ae38-abf6c6c2a872" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/hotel/content_menu.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/hotel/lal.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/hotel/home/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hotel/home/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/hotel/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hotel/menu.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,6 +191,9 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\server\OpenServer\domains\lar_progect_hotelSona\resources\views\hotel" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\server\OpenServer\domains\lar_progect_hotelSona\public\hotel" />
     </key>
@@ -207,7 +214,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602252284441</updated>
-      <workItem from="1602252288561" duration="8450000" />
+      <workItem from="1602252288561" duration="12880000" />
     </task>
     <servers />
   </component>
@@ -235,10 +242,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="480" y="227" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1602271307862" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1602270792429">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1602281432744">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1602270792429" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1602281432744" />
     <state x="633" y="159" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1602259092948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

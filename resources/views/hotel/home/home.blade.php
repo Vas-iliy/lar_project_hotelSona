@@ -1,11 +1,7 @@
 @extends(env('THEME') . '.layouts.site')
 
 @section('menu')
-    @include(env('THEME') . '.menu')
-@endsection
-
-@section('menu')
-    @include(env('THEME') . '.menu')
+    {!! $navigation!!}
 @endsection
 
 @section('content')
