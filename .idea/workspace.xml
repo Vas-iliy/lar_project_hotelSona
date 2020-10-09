@@ -1,7 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d435acc-d345-4de9-ae38-abf6c6c2a872" name="Default Changelist" comment="" />
+    <list default="true" id="7d435acc-d345-4de9-ae38-abf6c6c2a872" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/Repository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/css/elegant-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/css/flaticon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/css/images/ui-icons_444444_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/css/images/ui-icons_555555_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/css/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/css/magnific-popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/css/nice-select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/css/slicknav.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/fonts/ElegantIcons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/fonts/ElegantIcons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/fonts/ElegantIcons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/fonts/ElegantIcons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/fonts/Flaticon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/fonts/Flaticon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/fonts/Flaticon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/fonts/Flaticon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/about/about-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/about/about-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/about/about-p1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/about/about-p2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/about/about-p3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-details/avatar/avatar-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-details/avatar/avatar-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-details/avatar/avatar-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-details/blog-details-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-details/blog-details-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-details/blog-details-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-details/blog-details-hero.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/blog/blog-wide.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/flag.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/footer-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/gallery/gallery-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/gallery/gallery-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/gallery/gallery-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/gallery/gallery-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/hero/hero-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/hero/hero-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/hero/hero-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/room/avatar/avatar-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/room/avatar/avatar-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/room/room-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/room/room-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/room/room-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/room/room-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/room/room-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/room/room-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/room/room-b1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/room/room-b2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/room/room-b3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/room/room-b4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/room/room-details.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/services/s-icon-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/testimonial-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/img/video-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/js/jquery-3.3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/js/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/js/jquery.magnific-popup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/js/jquery.nice-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/js/jquery.slicknav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hotel/js/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/hotel/layouts/site.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +103,30 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -130,17 +245,20 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1idzW3mpQ4Gi0TN0HTI5dt8biM6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lar_progect_animals" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -148,6 +266,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\server\OpenServer\domains\lar_progect_hotelSona\public\hotel" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -165,11 +288,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602252284441</updated>
-      <workItem from="1602252288561" duration="661000" />
+      <workItem from="1602252288561" duration="4883000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602259047473">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1602259047473" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1602259283029">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602259283029" />
+    <state width="211" height="457" key="HiddenNamespacesPopup" timestamp="1602259069022">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="211" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1602259069022" />
+    <state x="480" y="227" key="NewPhpClassDialog" timestamp="1602259229074">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="480" y="227" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1602259229074" />
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1602258788411">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1602258788411" />
+    <state x="633" y="159" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1602259092948">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="633" y="159" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1536.824@0.0.1536.824" timestamp="1602259092948" />
   </component>
 </project>
