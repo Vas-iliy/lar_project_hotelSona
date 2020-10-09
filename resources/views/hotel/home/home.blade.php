@@ -9,6 +9,7 @@
 @endsection
 
 @section('footer')
-    @include(env('THEME') . '.footer')
+    {!! $footer !!}
+    {{--@include(env('THEME') . '.footer')--}}
 @endsection
 

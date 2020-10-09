@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Repositories\ContactRepository;
 use App\Repositories\MenuRepository;
+use App\Repositories\SocialRepository;
+use App\Repositories\TextRepository;
+use Cassandra\Schema;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\DB;
 
 class SiteController extends Controller
 {
@@ -24,11 +28,14 @@ class SiteController extends Controller
     protected $category_rep;
     protected $text_rep;
     protected $img_rep;
+    protected $social_rep;
 
-    public function __construct(ContactRepository $contact_rep, MenuRepository $menu_rep)
+    public function __construct(ContactRepository $contact_rep, MenuRepository $menu_rep, SocialRepository $social_rep, TextRepository $text_rep)
     {
         $this->contact_rep = $contact_rep;
         $this->menu_rep = $menu_rep;
+        $this->social_rep = $social_rep;
+        $this->text_rep = $text_rep;
     }
 
     protected function renderOutput() {
@@ -36,9 +43,12 @@ class SiteController extends Controller
         $navigation = view(env('THEME') . '.menu', compact('menu'))->render();
         $this->vars = Arr::add($this->vars, 'navigation', $navigation);
 
-
         $contacts = $this->getContact();
-        $footer = view(env('THEME') . '.footer', compact('contacts'))->render();
+        $contacts = $contacts[0];
+        $icons = $this->getIcons();
+        $where = ['title', 'footer'];
+        $text = $this->getText($where);
+        $footer = view(env('THEME') . '.footer', compact(['contacts', 'icons', 'text']))->render();
         $this->vars = Arr::add($this->vars, 'footer', $footer);
 
         return view($this->template)->with($this->vars);
@@ -66,5 +76,17 @@ class SiteController extends Controller
         $contact = $this->contact_rep->get('*');
 
         return $contact;
+    }
+
+    protected function getIcons() {
+        $icons = $this->social_rep->get('*');
+
+        return $icons;
+    }
+
+    protected function getText($where) {
+        $text = $this->text_rep->get('*', false, $where);
+
+        return $text;
     }
 }
