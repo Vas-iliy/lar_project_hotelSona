@@ -2,15 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Image;
 use App\Repositories\ContactRepository;
+use App\Repositories\ImageRepository;
 use App\Repositories\MenuRepository;
+use App\Repositories\RoomsRepository;
 use App\Repositories\SocialRepository;
 use App\Repositories\TextRepository;
-use Cassandra\Schema;
-use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\DB;
 
 class SiteController extends Controller
 {
@@ -31,13 +29,14 @@ class SiteController extends Controller
     protected $img_rep;
     protected $social_rep;
 
-    public function __construct(ContactRepository $contact_rep, MenuRepository $menu_rep, SocialRepository $social_rep, TextRepository $text_rep, Image $img_rep)
+    public function __construct(ContactRepository $contact_rep, MenuRepository $menu_rep, SocialRepository $social_rep, TextRepository $text_rep, ImageRepository $img_rep, RoomsRepository $room_rep)
     {
         $this->contact_rep = $contact_rep;
         $this->menu_rep = $menu_rep;
         $this->social_rep = $social_rep;
         $this->text_rep = $text_rep;
         $this->img_rep = $img_rep;
+        $this->room_rep = $room_rep;
     }
 
     protected function renderOutput() {
@@ -48,8 +47,7 @@ class SiteController extends Controller
         $contacts = $this->getContact();
         $contacts = $contacts[0];
         $icons = $this->getIcons();
-        $where = ['title', 'footer'];
-        $text = $this->getText($where);
+        $text = $this->getText(['position', 'footer']);
         $footer = view(env('THEME') . '.footer', compact(['contacts', 'icons', 'text']))->render();
         $this->vars = Arr::add($this->vars, 'footer', $footer);
 
@@ -92,8 +90,8 @@ class SiteController extends Controller
         return $text;
     }
 
-    protected function getImages($where) {
-        $img = $this->img_rep->get('*', false, $where);
+    protected function getImages($take, $where) {
+        $img = $this->img_rep->get('*', $take, $where);
 
         return $img;
     }
@@ -104,5 +102,11 @@ class SiteController extends Controller
         $text->load('text');
 
         return $text;
+    }
+
+    protected  function getRooms($take) {
+        $rooms = $this->room_rep->get('*', $take);
+
+        return $rooms;
     }
 }
