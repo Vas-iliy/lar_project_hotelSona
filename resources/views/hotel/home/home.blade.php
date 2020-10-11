@@ -5,11 +5,10 @@
 @endsection
 
 @section('content')
-    @include(env('THEME') . '.home.content')
+    {!! $content !!}
 @endsection
 
 @section('footer')
     {!! $footer !!}
-    {{--@include(env('THEME') . '.footer')--}}
 @endsection
 

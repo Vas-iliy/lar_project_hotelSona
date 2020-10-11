@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Image;
 use App\Repositories\ContactRepository;
 use App\Repositories\MenuRepository;
 use App\Repositories\SocialRepository;
@@ -30,12 +31,13 @@ class SiteController extends Controller
     protected $img_rep;
     protected $social_rep;
 
-    public function __construct(ContactRepository $contact_rep, MenuRepository $menu_rep, SocialRepository $social_rep, TextRepository $text_rep)
+    public function __construct(ContactRepository $contact_rep, MenuRepository $menu_rep, SocialRepository $social_rep, TextRepository $text_rep, Image $img_rep)
     {
         $this->contact_rep = $contact_rep;
         $this->menu_rep = $menu_rep;
         $this->social_rep = $social_rep;
         $this->text_rep = $text_rep;
+        $this->img_rep = $img_rep;
     }
 
     protected function renderOutput() {
@@ -59,7 +61,7 @@ class SiteController extends Controller
         $menuBuilder = \Menu::make('myMenu', function ($m) use ($menu){
             foreach ($menu as $item) {
                 if ($item->parent == 0) {
-                    $m->add($item->alias, $item->path)->id($item->id);
+                    $m->add($item->title, $item->path)->id($item->id);
                 }
                 else {
                     if ($m->find($item->parent)) {
@@ -86,6 +88,20 @@ class SiteController extends Controller
 
     protected function getText($where) {
         $text = $this->text_rep->get('*', false, $where);
+
+        return $text;
+    }
+
+    protected function getImages($where) {
+        $img = $this->img_rep->get('*', false, $where);
+
+        return $img;
+    }
+
+    protected function getTextPage($where)
+    {
+        $text = $this->menu_rep->one($where);
+        $text->load('text');
 
         return $text;
     }

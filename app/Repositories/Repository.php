@@ -26,4 +26,10 @@ class Repository
         return $builder->get();
     }
 
+    public function one($where) {
+        $builder = $this->model->where($where[0], $where[1])->first();
+
+        return $builder;
+    }
+
 }
