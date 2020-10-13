@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Image;
+use App\Repositories\CommentsRepository;
 use App\Repositories\ContactRepository;
 use App\Repositories\ImageRepository;
 use App\Repositories\MenuRepository;
@@ -14,9 +14,11 @@ use Illuminate\Support\Arr;
 
 class HomeController extends SiteController
 {
-    public function __construct(ContactRepository $contact_rep, MenuRepository $menu_rep, SocialRepository $social_rep, TextRepository $text_rep, ImageRepository $img_rep, ServicesRepository $service_rep, RoomsRepository $room_rep)
+    public function __construct(ContactRepository $contact_rep, MenuRepository $menu_rep, SocialRepository $social_rep,
+                                TextRepository $text_rep, ImageRepository $img_rep, ServicesRepository $service_rep,
+                                RoomsRepository $room_rep, CommentsRepository $comment_rep)
     {
-        parent::__construct($contact_rep, $menu_rep, $social_rep, $text_rep, $img_rep, $room_rep);
+        parent::__construct($contact_rep, $menu_rep, $social_rep, $text_rep, $img_rep, $room_rep, $comment_rep);
         $this->one_page = '.home';
         $this->template = env('THEME') . $this->one_page . '.home';
 
@@ -31,8 +33,10 @@ class HomeController extends SiteController
         $textAbout = $this->getText(['position', 'About Us']);
         $services = $this->getServices();
         $rooms = $this->getRooms(4);
+        $comments = $this->getComments(2);
 
-        $content = view(env('THEME') . $this->one_page . '.content', compact(['imgs', 'text', 'imgAbout', 'textAbout', 'services', 'rooms']))->render();
+        $content = view(env('THEME') . $this->one_page . '.content', compact(
+            ['imgs', 'text', 'imgAbout', 'textAbout', 'services', 'rooms', 'comments']))->render();
         $this->vars = Arr::add($this->vars, 'content', $content);
 
         return $this->renderOutput();

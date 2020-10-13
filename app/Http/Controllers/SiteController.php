@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\CommentsRepository;
 use App\Repositories\ContactRepository;
 use App\Repositories\ImageRepository;
 use App\Repositories\MenuRepository;
@@ -29,7 +30,8 @@ class SiteController extends Controller
     protected $img_rep;
     protected $social_rep;
 
-    public function __construct(ContactRepository $contact_rep, MenuRepository $menu_rep, SocialRepository $social_rep, TextRepository $text_rep, ImageRepository $img_rep, RoomsRepository $room_rep)
+    public function __construct(ContactRepository $contact_rep, MenuRepository $menu_rep, SocialRepository $social_rep,
+                                TextRepository $text_rep, ImageRepository $img_rep, RoomsRepository $room_rep, CommentsRepository $comment_rep)
     {
         $this->contact_rep = $contact_rep;
         $this->menu_rep = $menu_rep;
@@ -37,6 +39,7 @@ class SiteController extends Controller
         $this->text_rep = $text_rep;
         $this->img_rep = $img_rep;
         $this->room_rep = $room_rep;
+        $this->comment_rep = $comment_rep;
     }
 
     protected function renderOutput() {
@@ -108,5 +111,11 @@ class SiteController extends Controller
         $rooms = $this->room_rep->get('*', $take);
 
         return $rooms;
+    }
+
+    protected function getComments($take) {
+        $comments = $this->comment_rep->get('*', $take);
+
+        return $comments;
     }
 }
