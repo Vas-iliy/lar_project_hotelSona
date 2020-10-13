@@ -64,14 +64,16 @@
 @if($services)
 <section class="services-section spad">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <span>What We Do</span>
-                    <h2>Discover Our Services</h2>
+        @if($textService)
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>{{$textService[0]->title}}</span>
+                        <h2>{{$textService[0]->descr}}</h2>
+                    </div>
                 </div>
             </div>
-        </div>
+        @endif
         <div class="row">
             @foreach($services as $service)
                 <div class="col-lg-4 col-sm-6">
@@ -116,7 +118,11 @@
                                     </tr>
                                     <tr>
                                         <td class="r-o">Services:</td>
-                                        <td>Wifi, Television, Bathroom,...</td>
+                                        <td>
+                                            @foreach($room->services as $k => $service)
+                                                {{$service->title}},{{$k == count($room->services) - 1 ? '...' : ' '}}
+                                            @endforeach
+                                        </td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -136,14 +142,16 @@
 @if($comments)
 <section class="testimonial-section spad">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <span>Testimonials</span>
-                    <h2>What Customers Say?</h2>
+        @if($textComment)
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>{{$textComment[0]->title}}}</span>
+                        <h2>{{$textComment[0]->descr}}</h2>
+                    </div>
                 </div>
             </div>
-        </div>
+        @endif
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
                 <div class="testimonial-slider owl-carousel">
@@ -171,63 +179,35 @@
 <!-- Testimonial Section End -->
 
 <!-- Blog Section Begin -->
+@if($news)
 <section class="blog-section spad">
     <div class="container">
+        @if($textNews)
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>{{$textNews[0]->title}}</span>
+                        <h2>{{$textNews[0]->descr}}</h2>
+                    </div>
+                </div>
+            </div>
+        @endif
         <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <span>Hotel News</span>
-                    <h2>Our Blog & Event</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="blog-item set-bg" data-setbg="img/blog/blog-1.jpg">
-                    <div class="bi-text">
-                        <span class="b-tag">Travel Trip</span>
-                        <h4><a href="#">Tremblant In Canada</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+            @foreach($news as $k => $new)
+                <div class="{{$k<3 ? 'col-lg-4' : 'col-lg-6'}}">
+                    <div class="blog-item {{$k>2 ? 'small-size' : ''}} set-bg" data-setbg="{{asset(env('THEME'))}}/img/blog/{{$new->img}}">
+                        <div class="bi-text">
+                            <span class="b-tag">{{$new->filter->title}}</span>
+                            <h4><a href="#">{{$new->title}}</a></h4>
+                            @if($new->created_at)
+                                <div class="b-time"><i class="icon_clock_alt"></i> {{$new->created_at->format('jS, F, Y')}}</div>
+                            @endif
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="blog-item set-bg" data-setbg="img/blog/blog-2.jpg">
-                    <div class="bi-text">
-                        <span class="b-tag">Camping</span>
-                        <h4><a href="#">Choosing A Static Caravan</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="blog-item set-bg" data-setbg="img/blog/blog-3.jpg">
-                    <div class="bi-text">
-                        <span class="b-tag">Event</span>
-                        <h4><a href="#">Copper Canyon</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 21th April, 2019</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <div class="blog-item small-size set-bg" data-setbg="img/blog/blog-wide.jpg">
-                    <div class="bi-text">
-                        <span class="b-tag">Event</span>
-                        <h4><a href="#">Trip To Iqaluit In Nunavut A Canadian Arctic City</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 08th April, 2019</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="blog-item small-size set-bg" data-setbg="img/blog/blog-10.jpg">
-                    <div class="bi-text">
-                        <span class="b-tag">Travel</span>
-                        <h4><a href="#">Traveling To Barcelona</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 12th April, 2019</div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
+@endif
 <!-- Blog Section End -->

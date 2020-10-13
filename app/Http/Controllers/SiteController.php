@@ -6,6 +6,7 @@ use App\Repositories\CommentsRepository;
 use App\Repositories\ContactRepository;
 use App\Repositories\ImageRepository;
 use App\Repositories\MenuRepository;
+use App\Repositories\NewsRepository;
 use App\Repositories\RoomsRepository;
 use App\Repositories\SocialRepository;
 use App\Repositories\TextRepository;
@@ -31,7 +32,8 @@ class SiteController extends Controller
     protected $social_rep;
 
     public function __construct(ContactRepository $contact_rep, MenuRepository $menu_rep, SocialRepository $social_rep,
-                                TextRepository $text_rep, ImageRepository $img_rep, RoomsRepository $room_rep, CommentsRepository $comment_rep)
+                                TextRepository $text_rep, ImageRepository $img_rep, RoomsRepository $room_rep,
+                                CommentsRepository $comment_rep, NewsRepository $article_rep)
     {
         $this->contact_rep = $contact_rep;
         $this->menu_rep = $menu_rep;
@@ -40,6 +42,7 @@ class SiteController extends Controller
         $this->img_rep = $img_rep;
         $this->room_rep = $room_rep;
         $this->comment_rep = $comment_rep;
+        $this->article_rep = $article_rep;
     }
 
     protected function renderOutput() {
@@ -109,6 +112,7 @@ class SiteController extends Controller
 
     protected  function getRooms($take) {
         $rooms = $this->room_rep->get('*', $take);
+        $rooms->load('services');
 
         return $rooms;
     }
@@ -117,5 +121,12 @@ class SiteController extends Controller
         $comments = $this->comment_rep->get('*', $take);
 
         return $comments;
+    }
+
+    protected function getNews($take) {
+        $news = $this->article_rep->get('*', $take);
+        $news->load('filter');
+
+        return $news;
     }
 }
