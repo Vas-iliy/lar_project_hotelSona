@@ -23,6 +23,7 @@ class RoomsController extends SiteController
 
         $this->one_page = '.rooms';
         $this->template = env('THEME') . $this->one_page . '.rooms';
+        $this->room_rep = $room_rep;
     }
 
     /**
@@ -46,10 +47,15 @@ class RoomsController extends SiteController
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show($id)
+    public function show($alias)
     {
-        //
+        $room = $this->room_rep->one(['title', $alias]);
+
+        $content = view(env('THEME') . $this->one_page . '.one', compact(['room']))->render();
+        $this->vars = Arr::add($this->vars, 'content', $content);
+
+        return $this->renderOutput();
     }
 }
