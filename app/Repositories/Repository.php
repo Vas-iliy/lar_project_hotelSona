@@ -20,7 +20,7 @@ class Repository
         }
 
         if ($pag) {
-            $builder->paginate(6);
+            return $builder->paginate($pag);
         }
 
         return $builder->get();

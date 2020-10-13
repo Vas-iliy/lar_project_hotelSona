@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Repositories\CommentsRepository;
 use App\Repositories\ContactRepository;
 use App\Repositories\ImageRepository;
@@ -69,7 +70,7 @@ class SiteController extends Controller
                 }
                 else {
                     if ($m->find($item->parent)) {
-                        $m->find($item->parent)->add($item->alias, $item->path)->id();
+                        $m->find($item->parent)->add($item->title, $item->path)->id();
                     }
                 }
             }
@@ -110,8 +111,15 @@ class SiteController extends Controller
         return $text;
     }
 
-    protected  function getRooms($take) {
-        $rooms = $this->room_rep->get('*', $take);
+    protected  function getRooms($take, $pag, $alias = false) {
+
+        $where = false;
+        if ($alias) {
+            $id = Category::select('id')->where('alias', $alias)->first()->id;
+            $where = ['category_id', $id];
+        }
+
+        $rooms = $this->room_rep->get('*', $take, $where, $pag);
         $rooms->load('services');
 
         return $rooms;

@@ -37,7 +37,7 @@ class HomeController extends SiteController
         $textService = $this->getText(['position', 'Our Services']);
         $services = $this->getServices();
 
-        $rooms = $this->getRooms(4);
+        $rooms = $this->getRooms(4, false);
 
         $textComment = $this->getText(['position', 'home comments']);
         $comments = $this->getComments(2);
